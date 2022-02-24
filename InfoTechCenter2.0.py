@@ -1,6 +1,7 @@
 # Weather Branch
 
 import random
+from colorama import Fore
 
 def weather():
     weatherForecast = ["Ice", "Snow", "Heavy Rain", "Rain", "High Wind", "Fog", "Sunny"]
@@ -10,4 +11,9 @@ def weather():
 # Calling weather function to determine weather
 weatherAlert = weather()
 
-print(weatherAlert)
+def vehicleResponseSystem():
+    if weatherAlert == "Ice":
+        print (Fore.RED + "\nVRS has changed your alarm 30 minutes early due to " + Fore.LIGHTBLUE_EX + "ICY ROADS!")
+        print (Fore.RED + "VRS will only allow your car to go 30 MPH" + Fore.RESET)
+
+vehicleResponseSystem()
